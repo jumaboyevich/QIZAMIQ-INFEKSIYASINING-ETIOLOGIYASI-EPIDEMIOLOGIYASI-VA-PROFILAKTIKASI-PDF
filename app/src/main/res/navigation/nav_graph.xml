@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_shop"
+    app:startDestination="@id/firstFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.qizamiqinfeksiyasiningetiologiyasiepidemiologiyasivaprofilaktikasi.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_pdfFragment"
+            app:destination="@id/pdfFragment" />
+     </fragment>
+
+    <fragment
+        android:id="@+id/pdfFragment"
+        android:name="uz.qizamiqinfeksiyasiningetiologiyasiepidemiologiyasivaprofilaktikasi.PdfFragment"
+        android:label="fragment_pdf"
+        tools:layout="@layout/fragment_pdf" />
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="uz.qizamiqinfeksiyasiningetiologiyasiepidemiologiyasivaprofilaktikasi.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
